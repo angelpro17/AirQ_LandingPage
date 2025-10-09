@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirQ - Monitoreo de Calidad del Aire IoT | Oxaira</title>
+    <meta name="description" content="AirQ te proporciona datos precisos sobre la calidad del aire en tiempo real para colegios, universidades, empresas y familias. Tecnología IoT para ambientes saludables.">
+    <meta name="keywords" content="calidad del aire, IoT, monitoreo, PM2.5, CO2, salud, contaminación, AirQ, Oxaira">
+    <meta name="author" content="Oxaira">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AirQ - Monitoreo de Calidad del Aire IoT">
+    <meta property="og:description" content="Tecnología IoT para ambientes saludables. Monitorea CO₂, PM2.5, humedad y temperatura en tiempo real.">
+    <meta property="og:image" content="assets/LogoOxaira.png">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AirQ - Monitoreo de Calidad del Aire IoT">
+    <meta name="twitter:description" content="Tecnología IoT para ambientes saludables. Monitorea CO₂, PM2.5, humedad y temperatura en tiempo real.">
+    <meta name="twitter:image" content="assets/LogoOxaira.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/LogoOxaira.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="assets/LogoOxaira.png" as="image">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Oxaira",
+        "url": "",
+        "logo": "assets/LogoOxaira.png",
+        "description": "Startup de base tecnológica especializada en soluciones IoT para monitoreo de calidad del aire",
+        "foundingDate": "2025",
+        "industry": "Technology",
+        "products": [
+            {
+                "@type": "Product",
+                "name": "AirQ",
+                "description": "Dispositivo IoT para monitoreo de calidad del aire en tiempo real"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/LogoOxaira.png" alt="Logo Oxaira - Tecnología IoT para Ambientes Saludables" class="logo-image" width="100" height="100">
+                </div>
+                <nav class="navigation" role="navigation" aria-label="Navegación principal">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link" aria-current="page">Inicio</a></li>
+                        <li><a href="#about" class="nav-link">Nosotros</a></li>
+                        <li><a href="#product" class="nav-link">Producto</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#contact" class="nav-link">Contacto</a></li>
+                        <li><a href="#" class="nav-link nav-cta">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+                <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title" class="hero-title">Monitorea la Calidad del Aire en Tiempo Real</h1>
+                        <p class="hero-description">
+                            <strong>AirQ</strong> te proporciona datos precisos sobre la calidad del aire en tu ubicación, 
+                            ayudándote a tomar decisiones informadas para tu salud y bienestar.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Comenzar Ahora</a>
+                            <a href="#product" class="btn btn-secondary">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="hero-widget">
+                        <div class="air-quality-widget" role="img" aria-label="Widget de calidad del aire actual">
+                            <h2 class="widget-title">Calidad del aire actual</h2>
+                            <div class="quality-indicator">
+                                <span class="quality-text">
+                                    <span class="quality-good">Buena</span> - 
+                                    <span class="quality-moderate">Moderada</span> - 
+                                    <span class="quality-poor">Alta</span>
+                                </span>
+                                <div class="quality-dot quality-good-dot" aria-label="Estado actual: Buena"></div>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">PM2.5</span>
+                                    <span class="metric-value">35 μg/m³</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">PM10</span>
+                                    <span class="metric-value">85 μg/m³</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">O₃</span>
+                                    <span class="metric-value">70 ppb</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about" class="about-section" aria-labelledby="about-title">
+                <div class="section-content">
+                    <div class="section-text">
+                        <div class="section-header">
+                            <h2 id="about-title" class="section-title">Sobre Nosotros</h2>
+                            <div class="section-line" aria-hidden="true"></div>
+                        </div>
+                        <h3 class="company-name">Oxaira</h3>
+                        <p class="company-description">
+                            Oxaira es una startup de base tecnológica que busca mejorar la calidad de vida mediante 
+                            soluciones IoT accesibles y escalables. Nuestro enfoque está en la salud, la sostenibilidad 
+                            y la innovación para combatir los efectos de la contaminación del aire en espacios cerrados.
+                        </p>
+                        <p class="company-description">
+                            Con <strong>AirQ</strong>, proporcionamos datos confiables y en tiempo real que ayudan a 
+                            instituciones y empresas a tomar decisiones para crear ambientes más saludables.
+                        </p>
+                    </div>
+                    <div class="team-section">
+                        <h3 class="sr-only">Nuestro Equipo</h3>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/renato-profile.JPG" alt="Renato - Integrante del equipo Oxaira" class="member-image" width="132" height="132">
+                                </div>
+                                <span class="member-name">Renato</span>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/Diego_Ramirez.jpeg" alt="Diego Ramirez - Integrante del equipo Oxaira" class="member-image" width="132" height="132">
+                                </div>
+                                <span class="member-name">Diego Ramirez</span>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/Luis_Angel.jpeg" alt="Luis Angel - Integrante del equipo Oxaira" class="member-image" width="132" height="132">
+                                </div>
+                                <span class="member-name">Luis Angel</span>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/andres.jpg" alt="Andres - Integrante del equipo Oxaira" class="member-image" width="132" height="132">
+                                </div>
+                                <span class="member-name">Andres Rodriguez</span>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/johan.jpg" alt="Johan - Integrante del equipo Oxaira" class="member-image" width="132" height="132">
+                                </div>
+                                <span class="member-name">Johan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Section -->
+            <section id="product" class="product-section" aria-labelledby="product-title">
+                <div class="section-content">
+                    <div class="section-text">
+                        <div class="section-header">
+                            <h2 id="product-title" class="section-title">Nuestro Producto - AirQ</h2>
+                            <div class="section-line" aria-hidden="true"></div>
+                        </div>
+                        <div class="product-description">
+                            <h3 class="product-subtitle">AirQ - Tecnología IoT para Ambientes Saludables</h3>
+                            <p class="product-text">
+                                AirQ integra sensores ambientales de última generación y una plataforma intuitiva para que 
+                                colegios, universidades, empresas y familias puedan gestionar la calidad del aire que respiran.
+                            </p>
+                            <ul class="product-features">
+                                <li>Monitoreo en tiempo real de CO₂, PM2.5, humedad y temperatura.</li>
+                                <li>Alertas inmediatas y recomendaciones de ventilación o purificación.</li>
+                                <li>Historial de métricas con reportes periódicos.</li>
+                                <li>Integración con protocolos de seguridad y salud.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-visual">
+                        <div class="product-background" aria-hidden="true"></div>
+                        <img src="assets/product.png" alt="AirQ App - Aplicación móvil para monitoreo de calidad del aire en tiempo real" class="product-image" width="599" height="450">
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="faq-section" aria-labelledby="faq-title">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 id="faq-title" class="section-title">Preguntas Frecuentes</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-answer-1">
+                                <span class="faq-question">¿Quiénes pueden usar AirQ?</span>
+                                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M13.4 11.3999V6.3999C13.4 6.13469 13.2947 5.88033 13.1071 5.6928C12.9196 5.50526 12.6652 5.3999 12.4 5.3999C12.1348 5.3999 11.8805 5.50526 11.6929 5.6928C11.5054 5.88033 11.4 6.13469 11.4 6.3999V11.3999H6.40002C6.13481 11.3999 5.88045 11.5053 5.69292 11.6928C5.50538 11.8803 5.40002 12.1347 5.40002 12.3999C5.40002 12.6651 5.50538 12.9195 5.69292 13.107C5.88045 13.2945 6.13481 13.3999 6.40002 13.3999H11.4V18.3999C11.4 18.6651 11.5054 18.9195 11.6929 19.107C11.8805 19.2945 12.1348 19.3999 12.4 19.3999C12.6652 19.3999 12.9196 19.2945 13.1071 19.107C13.2947 18.9195 13.4 18.6651 13.4 18.3999V13.3999H18.4C18.6652 13.3999 18.9196 13.2945 19.1071 13.107C19.2947 12.9195 19.4 12.6651 19.4 12.3999C19.4 12.1347 19.2947 11.8803 19.1071 11.6928C18.9196 11.5053 18.6652 11.3999 18.4 11.3999H13.4Z" fill="#21272A"/>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-1" class="faq-answer" hidden>
+                                <p>AirQ está diseñado para colegios, universidades, empresas, oficinas y familias que deseen monitorear y mejorar la calidad del aire en sus espacios.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-answer-2">
+                                <span class="faq-question">¿Qué mide el dispositivo?</span>
+                                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M13.4 11.3999V6.3999C13.4 6.13469 13.2947 5.88033 13.1071 5.6928C12.9196 5.50526 12.6652 5.3999 12.4 5.3999C12.1348 5.3999 11.8805 5.50526 11.6929 5.6928C11.5054 5.88033 11.4 6.13469 11.4 6.3999V11.3999H6.40002C6.13481 11.3999 5.88045 11.5053 5.69292 11.6928C5.50538 11.8803 5.40002 12.1347 5.40002 12.3999C5.40002 12.6651 5.50538 12.9195 5.69292 13.107C5.88045 13.2945 6.13481 13.3999 6.40002 13.3999H11.4V18.3999C11.4 18.6651 11.5054 18.9195 11.6929 19.107C11.8805 19.2945 12.1348 19.3999 12.4 19.3999C12.6652 19.3999 12.9196 19.2945 13.1071 19.107C13.2947 18.9195 13.4 18.6651 13.4 18.3999V13.3999H18.4C18.6652 13.3999 18.9196 13.2945 19.1071 13.107C19.2947 12.9195 19.4 12.6651 19.4 12.3999C19.4 12.1347 19.2947 11.8803 19.1071 11.6928C18.9196 11.5053 18.6652 11.3999 18.4 11.3999H13.4Z" fill="#21272A"/>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-2" class="faq-answer" hidden>
+                                <p>El dispositivo AirQ mide CO₂, PM2.5, PM10, ozono (O₃), humedad relativa y temperatura ambiente en tiempo real.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-answer-3">
+                                <span class="faq-question">¿Qué beneficios ofrece?</span>
+                                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M13.4 11.3999V6.3999C13.4 6.13469 13.2947 5.88033 13.1071 5.6928C12.9196 5.50526 12.6652 5.3999 12.4 5.3999C12.1348 5.3999 11.8805 5.50526 11.6929 5.6928C11.5054 5.88033 11.4 6.13469 11.4 6.3999V11.3999H6.40002C6.13481 11.3999 5.88045 11.5053 5.69292 11.6928C5.50538 11.8803 5.40002 12.1347 5.40002 12.3999C5.40002 12.6651 5.50538 12.9195 5.69292 13.107C5.88045 13.2945 6.13481 13.3999 6.40002 13.3999H11.4V18.3999C11.4 18.6651 11.5054 18.9195 11.6929 19.107C11.8805 19.2945 12.1348 19.3999 12.4 19.3999C12.6652 19.3999 12.9196 19.2945 13.1071 19.107C13.2947 18.9195 13.4 18.6651 13.4 18.3999V13.3999H18.4C18.6652 13.3999 18.9196 13.2945 19.1071 13.107C19.2947 12.9195 19.4 12.6651 19.4 12.3999C19.4 12.1347 19.2947 11.8803 19.1071 11.6928C18.9196 11.5053 18.6652 11.3999 18.4 11.3999H13.4Z" fill="#21272A"/>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-3" class="faq-answer" hidden>
+                                <p>AirQ mejora la salud ocupacional, reduce enfermedades respiratorias, aumenta la productividad, cumple con normativas de salud y proporciona datos para tomar decisiones informadas sobre ventilación.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-answer-4">
+                                <span class="faq-question">¿Mis datos están seguros?</span>
+                                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M13.4 11.3999V6.3999C13.4 6.13469 13.2947 5.88033 13.1071 5.6928C12.9196 5.50526 12.6652 5.3999 12.4 5.3999C12.1348 5.3999 11.8805 5.50526 11.6929 5.6928C11.5054 5.88033 11.4 6.13469 11.4 6.3999V11.3999H6.40002C6.13481 11.3999 5.88045 11.5053 5.69292 11.6928C5.50538 11.8803 5.40002 12.1347 5.40002 12.3999C5.40002 12.6651 5.50538 12.9195 5.69292 13.107C5.88045 13.2945 6.13481 13.3999 6.40002 13.3999H11.4V18.3999C11.4 18.6651 11.5054 18.9195 11.6929 19.107C11.8805 19.2945 12.1348 19.3999 12.4 19.3999C12.6652 19.3999 12.9196 19.2945 13.1071 19.107C13.2947 18.9195 13.4 18.6651 13.4 18.3999V13.3999H18.4C18.6652 13.3999 18.9196 13.2945 19.1071 13.107C19.2947 12.9195 19.4 12.6651 19.4 12.3999C19.4 12.1347 19.2947 11.8803 19.1071 11.6928C18.9196 11.5053 18.6652 11.3999 18.4 11.3999H13.4Z" fill="#21272A"/>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-4" class="faq-answer" hidden>
+                                <p>Sí, implementamos encriptación de extremo a extremo, cumplimos con GDPR y normativas de privacidad. Tus datos se almacenan de forma segura y solo tú tienes acceso a ellos.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-toggle" aria-expanded="false" aria-controls="faq-answer-5">
+                                <span class="faq-question">¿Cuánto debo pagar?</span>
+                                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M13.4 11.3999V6.3999C13.4 6.13469 13.2947 5.88033 13.1071 5.6928C12.9196 5.50526 12.6652 5.3999 12.4 5.3999C12.1348 5.3999 11.8805 5.50526 11.6929 5.6928C11.5054 5.88033 11.4 6.13469 11.4 6.3999V11.3999H6.40002C6.13481 11.3999 5.88045 11.5053 5.69292 11.6928C5.50538 11.8803 5.40002 12.1347 5.40002 12.3999C5.40002 12.6651 5.50538 12.9195 5.69292 13.107C5.88045 13.2945 6.13481 13.3999 6.40002 13.3999H11.4V18.3999C11.4 18.6651 11.5054 18.9195 11.6929 19.107C11.8805 19.2945 12.1348 19.3999 12.4 19.3999C12.6652 19.3999 12.9196 19.2945 13.1071 19.107C13.2947 18.9195 13.4 18.6651 13.4 18.3999V13.3999H18.4C18.6652 13.3999 18.9196 13.2945 19.1071 13.107C19.2947 12.9195 19.4 12.6651 19.4 12.3999C19.4 12.1347 19.2947 11.8803 19.1071 11.6928C18.9196 11.5053 18.6652 11.3999 18.4 11.3999H13.4Z" fill="#21272A"/>
+                                </svg>
+                            </button>
+                            <div id="faq-answer-5" class="faq-answer" hidden>
+                                <p>Ofrecemos planes flexibles desde $99/mes para pequeñas oficinas hasta planes empresariales personalizados. Contáctanos para una cotización específica para tu institución.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section" aria-labelledby="contact-title">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 id="contact-title" class="section-title">Contáctanos</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <p class="contact-subtitle">¿Quieres implementar AirQ en tu institución u oficina? Escríbenos</p>
+                    
+                    <form class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre y Apellidos *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre completo" required aria-describedby="name-error">
+                            <span id="name-error" class="error-message" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="ejemplo@gmail.com" required aria-describedby="email-error">
+                            <span id="email-error" class="error-message" role="alert"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" class="form-label">Institución / Empresa</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Tu institución o empresa">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje *</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tu mensaje" required aria-describedby="message-error"></textarea>
+                            <span id="message-error" class="error-message" role="alert"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Oxaira. Todos los derechos reservados.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Síguenos en YouTube" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M17.812 5.01711H6.145C3.855 5.01711 2 6.85211 2 9.11611V14.8841C2 17.1481 3.856 18.9841 6.145 18.9841H17.812C20.102 18.9841 21.957 17.1481 21.957 14.8841V9.11611C21.957 6.85211 20.101 5.01611 17.812 5.01611V5.01711ZM15.009 12.2801L9.552 14.8551C9.51872 14.8711 9.48192 14.8785 9.44503 14.8765C9.40815 14.8744 9.37237 14.8631 9.34103 14.8436C9.3097 14.824 9.28382 14.7968 9.2658 14.7646C9.24779 14.7323 9.23822 14.6961 9.238 14.6591V9.35011C9.23867 9.31299 9.24872 9.27663 9.26722 9.24444C9.28573 9.21224 9.31208 9.18526 9.34382 9.16599C9.37556 9.14673 9.41167 9.13581 9.44877 9.13425C9.48587 9.1327 9.52276 9.14057 9.556 9.15711L15.014 11.8921C15.0504 11.9102 15.0809 11.9383 15.102 11.9729C15.1232 12.0076 15.1341 12.0476 15.1336 12.0882C15.1331 12.1288 15.1211 12.1685 15.0991 12.2026C15.077 12.2367 15.0458 12.2639 15.009 12.2811V12.2801Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Síguenos en Facebook" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M9.04598 5.865V8.613H7.03198V11.973H9.04598V21.959H13.18V11.974H15.955C15.955 11.974 16.215 10.363 16.341 8.601H13.197V6.303C13.197 5.96 13.647 5.498 14.093 5.498H16.347V2H13.283C8.94298 2 9.04598 5.363 9.04598 5.865Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Síguenos en Twitter" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M22 5.90692C21.2504 6.2343 20.4565 6.44896 19.644 6.54392C20.4968 6.04315 21.138 5.24903 21.448 4.30992C20.64 4.78025 19.7587 5.11152 18.841 5.28992C18.4545 4.88513 17.9897 4.56331 17.4748 4.3441C16.9598 4.12489 16.4056 4.01289 15.846 4.01492C13.58 4.01492 11.743 5.82492 11.743 8.05492C11.743 8.37092 11.779 8.67992 11.849 8.97492C10.2236 8.89761 8.63212 8.48233 7.17617 7.75556C5.72022 7.02879 4.43176 6.0065 3.393 4.75392C3.02883 5.36832 2.83742 6.0697 2.839 6.78392C2.8397 7.45189 3.00683 8.10915 3.32529 8.69631C3.64375 9.28348 4.1035 9.78203 4.663 10.1469C4.01248 10.1259 3.37602 9.95225 2.805 9.63992V9.68992C2.805 11.6479 4.22 13.2809 6.095 13.6529C5.74261 13.7464 5.37958 13.7938 5.015 13.7939C4.75 13.7939 4.493 13.7689 4.242 13.7189C4.51008 14.5268 5.02311 15.2312 5.70982 15.7343C6.39653 16.2373 7.22284 16.514 8.074 16.5259C6.61407 17.6505 4.82182 18.258 2.979 18.2529C2.647 18.2529 2.321 18.2329 2 18.1969C3.88125 19.3876 6.06259 20.0182 8.289 20.0149C15.836 20.0149 19.962 13.8579 19.962 8.51892L19.948 7.99592C20.7529 7.42959 21.4481 6.72177 22 5.90692Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Síguenos en Instagram" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M16.017 2H7.947C6.37015 2.00185 4.85844 2.62914 3.74353 3.74424C2.62862 4.85933 2.00159 6.37115 2 7.948L2 16.018C2.00185 17.5948 2.62914 19.1066 3.74424 20.2215C4.85933 21.3364 6.37115 21.9634 7.948 21.965H16.018C17.5948 21.9631 19.1066 21.3359 20.2215 20.2208C21.3364 19.1057 21.9634 17.5938 21.965 16.017V7.947C21.9631 6.37015 21.3359 4.85844 20.2208 3.74353C19.1057 2.62862 17.5938 2.00159 16.017 2V2ZM19.957 16.017C19.957 16.5344 19.8551 17.0468 19.6571 17.5248C19.4591 18.0028 19.1689 18.4371 18.803 18.803C18.4371 19.1689 18.0028 19.4591 17.5248 19.6571C17.0468 19.8551 16.5344 19.957 16.017 19.957H7.947C6.90222 19.9567 5.90032 19.5415 5.16165 18.8026C4.42297 18.0638 4.008 17.0618 4.008 16.017V7.947C4.00827 6.90222 4.42349 5.90032 5.16235 5.16165C5.90122 4.42297 6.90322 4.008 7.948 4.008H16.018C17.0628 4.00827 18.0647 4.42349 18.8034 5.16235C19.542 5.90122 19.957 6.90322 19.957 7.948V16.018V16.017Z" fill="white"/>
+                            <path d="M11.9819 6.81909C10.6134 6.82121 9.30148 7.36588 8.33385 8.3337C7.36621 9.30152 6.8218 10.6135 6.81995 11.9821C6.82153 13.351 7.36597 14.6634 8.33385 15.6315C9.30172 16.5996 10.614 17.1442 11.9829 17.1461C13.352 17.1445 14.6646 16.5999 15.6327 15.6318C16.6008 14.6637 17.1454 13.3512 17.1469 11.9821C17.1448 10.6132 16.5999 9.30098 15.6316 8.33329C14.6634 7.3656 13.3509 6.82141 11.9819 6.82009V6.81909ZM11.9819 15.1381C11.1452 15.1381 10.3427 14.8057 9.75102 14.214C9.15935 13.6223 8.82695 12.8198 8.82695 11.9831C8.82695 11.1463 9.15935 10.3438 9.75102 9.75217C10.3427 9.16049 11.1452 8.82809 11.9819 8.82809C12.8187 8.82809 13.6212 9.16049 14.2129 9.75217C14.8045 10.3438 15.1369 11.1463 15.1369 11.9831C15.1369 12.8198 14.8045 13.6223 14.2129 14.214C13.6212 14.8057 12.8187 15.1381 11.9819 15.1381Z" fill="white"/>
+                            <path d="M17.1559 8.09509C17.8391 8.09509 18.3929 7.54127 18.3929 6.85809C18.3929 6.17492 17.8391 5.62109 17.1559 5.62109C16.4728 5.62109 15.9189 6.17492 15.9189 6.85809C15.9189 7.54127 16.4728 8.09509 17.1559 8.09509Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Síguenos en LinkedIn" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M21.959 13.7189V21.0979H17.681V14.2129C17.681 12.4829 17.062 11.3029 15.514 11.3029C14.332 11.3029 13.628 12.0989 13.319 12.8679C13.206 13.1429 13.177 13.5259 13.177 13.9109V21.0979H8.897C8.897 21.0979 8.955 9.43788 8.897 8.22888H13.177V10.0529L13.149 10.0949H13.177V10.0529C13.745 9.17788 14.76 7.92688 17.033 7.92688C19.848 7.92688 21.959 9.76688 21.959 13.7189ZM4.421 2.02588C2.958 2.02588 2 2.98588 2 4.24888C2 5.48388 2.93 6.47288 4.365 6.47288H4.393C5.886 6.47288 6.813 5.48388 6.813 4.24888C6.787 2.98588 5.887 2.02588 4.422 2.02588H4.421ZM2.254 21.0979H6.532V8.22888H2.254V21.0979Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Back to top button -->
+        <button id="back-to-top" class="back-to-top" aria-label="Volver al inicio" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" fill="currentColor"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                const answer = button.nextElementSibling;
+                
+                button.setAttribute('aria-expanded', !expanded);
+                answer.hidden = expanded;
+                
+                // Rotate icon
+                const icon = button.querySelector('.faq-icon');
+                icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(45deg)';
+            });
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navigation = document.querySelector('.navigation');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+            navigation.classList.toggle('nav-open');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Calculate offset for fixed header (header height + some padding)
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const offset = headerHeight + 20; // Add 20px extra padding
+                    const targetPosition = target.offsetTop - offset;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navigation = document.querySelector('.nav');
+                    navigation.classList.remove('nav-open');
+                    document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.hidden = false;
+            } else {
+                backToTopBtn.hidden = true;
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form validation
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            
+            let isValid = true;
+            
+            // Validate name
+            if (!name.value.trim()) {
+                showError('name-error', 'El nombre es requerido');
+                isValid = false;
+            } else {
+                clearError('name-error');
+            }
+            
+            // Validate email
+            if (!email.value.trim() || !isValidEmail(email.value)) {
+                showError('email-error', 'Email válido es requerido');
+                isValid = false;
+            } else {
+                clearError('email-error');
+            }
+            
+            // Validate message
+            if (!message.value.trim()) {
+                showError('message-error', 'El mensaje es requerido');
+                isValid = false;
+            } else {
+                clearError('message-error');
+            }
+            
+            if (isValid) {
+                // Here you would normally send the form data
+                alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+                form.reset();
+            }
+        });
+
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+            errorElement.parentElement.querySelector('.form-input, .form-textarea').classList.add('error');
+        }
+
+        function clearError(elementId) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = '';
+            errorElement.parentElement.querySelector('.form-input, .form-textarea').classList.remove('error');
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+    </script>
+</body>
+</html>
