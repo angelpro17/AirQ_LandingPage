@@ -456,6 +456,46 @@ body {
     font-weight: 600;
 }
 
+/* About Video Section */
+.about-video-wrapper {
+    width: 100%;
+    padding: 0 2rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.video-content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.video-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* Product Section */
 .product-section {
     background: #F7F9FC;
