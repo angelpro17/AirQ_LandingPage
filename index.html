@@ -246,6 +246,256 @@
                 </div>
             </section>
 
+            <!-- Pricing Section -->
+            <section id="pricing" class="pricing-section" aria-labelledby="pricing-title">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 id="pricing-title" class="section-title">Planes y Precios</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="pricing-cards">
+                        <!-- Basic Plan -->
+                        <div class="pricing-card">
+                            <h3 class="plan-title">Básico</h3>
+                            <div class="plan-price">
+                                <span class="currency">$</span>
+                                <span class="amount">29</span>
+                                <span class="period">/mes</span>
+                            </div>
+                            <p class="plan-description">Ideal para hogares y pequeñas oficinas.</p>
+                            <ul class="plan-features">
+                                <li>1 Dispositivo AirQ</li>
+                                <li>Monitoreo en tiempo real</li>
+                                <li>App móvil (1 usuario)</li>
+                                <li>Alertas básicas</li>
+                            </ul>
+                            <button class="btn btn-secondary btn-block"
+                                onclick="openModal('Básico', '$29/mes')">Suscribirse</button>
+                        </div>
+
+                        <!-- Pro Plan -->
+                        <div class="pricing-card featured">
+                            <div class="featured-badge">Recomendado</div>
+                            <h3 class="plan-title">Pro</h3>
+                            <div class="plan-price">
+                                <span class="currency">$</span>
+                                <span class="amount">79</span>
+                                <span class="period">/mes</span>
+                            </div>
+                            <p class="plan-description">Para colegios y medianas empresas.</p>
+                            <ul class="plan-features">
+                                <li>Hasta 5 Dispositivos AirQ</li>
+                                <li>Panel de control web</li>
+                                <li>Usuarios ilimitados</li>
+                                <li>Reportes mensuales</li>
+                                <li>API de datos</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block"
+                                onclick="openModal('Pro', '$79/mes')">Suscribirse</button>
+                        </div>
+
+                        <!-- Enterprise Plan -->
+                        <div class="pricing-card">
+                            <h3 class="plan-title">Enterprise</h3>
+                            <div class="plan-price">
+                                <span class="amount">Personalizado</span>
+                            </div>
+                            <p class="plan-description">Para grandes instituciones y campus.</p>
+                            <ul class="plan-features">
+                                <li>Dispositivos ilimitados</li>
+                                <li>Integración personalizada</li>
+                                <li>Soporte dedicado 24/7</li>
+                                <li>Análisis predictivo IA</li>
+                                <li>SLA garantizado</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-secondary btn-block">Contáctanos</a>
+                            <!-- Payment Modal -->
+                            <div id="payment-modal" class="modal-overlay" aria-hidden="true">
+                                <div class="modal-content">
+                                    <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+                                    <h3 class="modal-title">Finalizar Suscripción</h3>
+                                    <div class="modal-plan-info">
+                                        <p>Plan seleccionado: <strong id="modal-plan-name">-</strong></p>
+                                        <p class="modal-price">Total a pagar: <strong id="modal-plan-price">-</strong>
+                                        </p>
+                                    </div>
+
+                                    <form id="payment-form">
+                                        <div class="form-row">
+                                            <label for="card-element">
+                                                Tarjeta de Crédito o Débito
+                                            </label>
+                                            <div id="card-element">
+                                                <!-- A Stripe Element will be inserted here. -->
+                                            </div>
+                                            <!-- Used to display form errors. -->
+                                            <div id="card-errors" role="alert"></div>
+                                        </div>
+                                        <button id="submit-payment" class="btn btn-primary btn-block">Pagar
+                                            Ahora</button>
+                                    </form>
+                                    <p class="secure-badge">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                        </svg>
+                                        Pago seguro con Stripe
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Success Modal -->
+            <div id="success-modal" class="modal-overlay" aria-hidden="true">
+                <div class="modal-content" style="text-align: center;">
+                    <button class="close-modal close-success" aria-label="Cerrar modal">&times;</button>
+                    <div class="success-icon-container">
+                        <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="modal-title">¡Pago Realizado con Éxito!</h3>
+                    <div class="modal-plan-info">
+                        <p>Hemos procesado tu suscripción correctamente.</p>
+                        <p>Se ha enviado un correo de confirmación con los detalles de tu plan y los siguientes pasos.
+                        </p>
+                    </div>
+
+                    <p style="margin-bottom: 1.5rem; color: #555;">¿Tienes alguna duda? Contáctanos directamente:</p>
+
+                    <a href="https://wa.me/51999999999" target="_blank" class="btn btn-whatsapp btn-block">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-right: 8px;">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stripe Script -->
+            <script src="https://js.stripe.com/v3/"></script>
+            <script>
+                // Usamos la clave pública proporcionada (51QC...)
+                const stripe = Stripe('pk_test_51QC7YA2N0BisYvgM9UWp8BbV58J0FYDnkVpuhMT8i3KIVS22WiD8R0MCYoOcvtrQgeDT4uEaJIg7Umyw7favKCH900mUtyqzcE');
+                const elements = stripe.elements();
+
+                // Estilos para el elemento de tarjeta
+                const style = {
+                    base: {
+                        color: '#32325d',
+                        fontFamily: '"Inter", sans-serif',
+                        fontSmoothing: 'antialiased',
+                        fontSize: '16px',
+                        '::placeholder': {
+                            color: '#aab7c4'
+                        }
+                    },
+                    invalid: {
+                        color: '#fa755a',
+                        iconColor: '#fa755a'
+                    }
+                };
+
+                // Crear y montar el elemento de tarjeta
+                const card = elements.create('card', { style: style });
+                card.mount('#card-element');
+
+                // Manejar errores de validación en tiempo real
+                card.on('change', function (event) {
+                    const displayError = document.getElementById('card-errors');
+                    if (event.error) {
+                        displayError.textContent = event.error.message;
+                    } else {
+                        displayError.textContent = '';
+                    }
+                });
+
+                // Lógica del Modal de Pago
+                const modal = document.getElementById('payment-modal');
+                const closeModalBtn = document.querySelector('.close-modal');
+                const paymentForm = document.getElementById('payment-form');
+
+                // Lógica del Modal de Éxito
+                const successModal = document.getElementById('success-modal');
+                const closeSuccessBtn = document.querySelector('.close-success');
+
+                function openModal(planName, price) {
+                    document.getElementById('modal-plan-name').textContent = planName;
+                    document.getElementById('modal-plan-price').textContent = price;
+                    modal.classList.add('active');
+                    modal.setAttribute('aria-hidden', 'false');
+                }
+
+                function closeModal() {
+                    modal.classList.remove('active');
+                    modal.setAttribute('aria-hidden', 'true');
+                    card.clear();
+                }
+
+                function openSuccessModal() {
+                    successModal.classList.add('active');
+                    successModal.setAttribute('aria-hidden', 'false');
+                }
+
+                function closeSuccessModal() {
+                    successModal.classList.remove('active');
+                    successModal.setAttribute('aria-hidden', 'true');
+                }
+
+                closeModalBtn.addEventListener('click', closeModal);
+                closeSuccessBtn.addEventListener('click', closeSuccessModal);
+
+                // Cerrar al hacer clic fuera del modal
+                window.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                    if (e.target === successModal) {
+                        closeSuccessModal();
+                    }
+                });
+
+                // Manejar envío del formulario
+                paymentForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const submitBtn = document.getElementById('submit-payment');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Procesando...';
+
+                    stripe.createToken(card).then(function (result) {
+                        if (result.error) {
+                            // Informar error al usuario
+                            const errorElement = document.getElementById('card-errors');
+                            errorElement.textContent = result.error.message;
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Pagar Ahora';
+                        } else {
+                            // Enviar token al servidor (o mostrarlo en este caso)
+                            stripeTokenHandler(result.token);
+                        }
+                    });
+                });
+
+                function stripeTokenHandler(token) {
+                    // Aquí normalmente enviarías el token a tu backend
+                    console.log(token);
+
+                    // Simular éxito y cambiar de modal
+                    closeModal();
+                    openSuccessModal();
+
+                    // Resetear botón del formulario
+                    document.getElementById('submit-payment').disabled = false;
+                    document.getElementById('submit-payment').textContent = 'Pagar Ahora';
+                }
+            </script>
+
             <!-- FAQ Section -->
             <section id="faq" class="faq-section" aria-labelledby="faq-title">
                 <div class="section-content">
@@ -265,7 +515,8 @@
                                 </svg>
                             </button>
                             <div id="faq-answer-1" class="faq-answer" hidden>
-                                <p>AirQ está diseñado para colegios, universidades, empresas, oficinas y familias que
+                                <p>AirQ está diseñado para colegios, universidades, empresas, oficinas y
+                                    familias que
                                     deseen monitorear y mejorar la calidad del aire en sus espacios.</p>
                             </div>
                         </div>
@@ -280,7 +531,8 @@
                                 </svg>
                             </button>
                             <div id="faq-answer-2" class="faq-answer" hidden>
-                                <p>El dispositivo AirQ mide CO₂, PM2.5, PM10, ozono (O₃), humedad relativa y temperatura
+                                <p>El dispositivo AirQ mide CO₂, PM2.5, PM10, ozono (O₃), humedad
+                                    relativa y temperatura
                                     ambiente en tiempo real.</p>
                             </div>
                         </div>
@@ -295,8 +547,10 @@
                                 </svg>
                             </button>
                             <div id="faq-answer-3" class="faq-answer" hidden>
-                                <p>AirQ mejora la salud ocupacional, reduce enfermedades respiratorias, aumenta la
-                                    productividad, cumple con normativas de salud y proporciona datos para tomar
+                                <p>AirQ mejora la salud ocupacional, reduce enfermedades respiratorias,
+                                    aumenta la
+                                    productividad, cumple con normativas de salud y proporciona datos
+                                    para tomar
                                     decisiones informadas sobre ventilación.</p>
                             </div>
                         </div>
@@ -311,8 +565,10 @@
                                 </svg>
                             </button>
                             <div id="faq-answer-4" class="faq-answer" hidden>
-                                <p>Sí, implementamos encriptación de extremo a extremo, cumplimos con GDPR y normativas
-                                    de privacidad. Tus datos se almacenan de forma segura y solo tú tienes acceso a
+                                <p>Sí, implementamos encriptación de extremo a extremo, cumplimos con
+                                    GDPR y normativas
+                                    de privacidad. Tus datos se almacenan de forma segura y solo tú
+                                    tienes acceso a
                                     ellos.</p>
                             </div>
                         </div>
@@ -327,8 +583,10 @@
                                 </svg>
                             </button>
                             <div id="faq-answer-5" class="faq-answer" hidden>
-                                <p>Ofrecemos planes flexibles desde $99/mes para pequeñas oficinas hasta planes
-                                    empresariales personalizados. Contáctanos para una cotización específica para tu
+                                <p>Ofrecemos planes flexibles desde $99/mes para pequeñas oficinas hasta
+                                    planes
+                                    empresariales personalizados. Contáctanos para una cotización
+                                    específica para tu
                                     institución.</p>
                             </div>
                         </div>
@@ -343,7 +601,8 @@
                         <h2 id="contact-title" class="section-title">Contáctanos</h2>
                         <div class="section-line" aria-hidden="true"></div>
                     </div>
-                    <p class="contact-subtitle">¿Quieres implementar AirQ en tu institución u oficina? Escríbenos</p>
+                    <p class="contact-subtitle">¿Quieres implementar AirQ en tu institución u oficina?
+                        Escríbenos</p>
 
                     <form class="contact-form" novalidate>
                         <div class="form-group">
